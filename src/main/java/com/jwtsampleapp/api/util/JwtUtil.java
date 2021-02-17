@@ -27,7 +27,7 @@ public class JwtUtil {
 				.setSubject(subject)
 				.setIssuer("Rakesh Sunkari")
 				.setIssuedAt(new Date(System.currentTimeMillis()))
-				.setExpiration(new Date(System.currentTimeMillis()+TimeUnit.MINUTES.toMillis(10)))
+				.setExpiration(new Date(System.currentTimeMillis()+TimeUnit.MINUTES.toMillis(100)))
 				.signWith(SignatureAlgorithm.HS512, secret.getBytes())
 				.compact();
 	}
